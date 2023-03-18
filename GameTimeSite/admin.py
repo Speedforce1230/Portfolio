@@ -3,7 +3,7 @@ from . import models
 
 
 class GameTimeAdmin(admin.ModelAdmin):
-    list_display = (['image_url'])
+    list_display = ['image_url']
 
 
 admin.site.register(models.GameTime, GameTimeAdmin)
