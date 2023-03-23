@@ -1,0 +1,15 @@
+#image-container{
+    padding-top: 5px; 
+    padding-left: 5px; 
+    padding-right: 5px;
+}
+#card-columns{
+    padding-bottom: 5px;
+}
+#cards{
+    width: 18rem; 
+    background-color: black;
+}
+body{
+    background-color: black;
+}
