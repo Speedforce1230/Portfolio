@@ -1,15 +1,24 @@
 #image-container{
     padding-top: 5px; 
-    padding-left: 5px; 
-    padding-right: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 #card-columns{
-    padding-bottom: 5px;
+    padding-right: 5px;
 }
-#cards{
-    width: 18rem; 
+#cards{ 
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
     background-color: black;
 }
 body{
     background-color: black;
+}
+#navbar{
+    background-color: gray;
+}
+::-webkit-scrollbar{
+    display: none;
 }
