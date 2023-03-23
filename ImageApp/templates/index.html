@@ -14,14 +14,11 @@
 <body>
 <!--Simple styling text for cards-->
 <div class="container-fluid" id="image-container"> 
-    <div class="row">
-        <!--games is a variable from views.py used to retrieve all relevant information-->
-        <!--for loop is used to repeatedly create cards for each object defined separately-->
-        <!--{} used to write python code into html-->
+    <div class="row" id="card-rows">
         {% for image in images %}
         <div class="col" id="card-columns">
             <div id="cards" class="card">
-                <img src="{{ image.image_url }}" class="card-img-top" alt="game image" >
+                <img src="{{ image.image_url }}">
             </div>
         </div>
         {% endfor %}

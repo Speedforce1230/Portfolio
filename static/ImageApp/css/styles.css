@@ -1,17 +1,27 @@
 #image-container{
-    padding-top: 5px; 
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 #card-columns{
     padding-right: 5px;
 }
+#card-rows{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+}
 #cards{ 
-    width: 300px;
-    height: 300px;
-    margin-bottom: 20px;
     background-color: black;
+    padding-bottom: 5px;
+    margin: 5px;
+}
+#cards img{
+    width: 430px;
+    height: 430px;
+    object-fit: cover;
 }
 body{
     background-color: black;
@@ -19,6 +29,4 @@ body{
 #navbar{
     background-color: gray;
 }
-::-webkit-scrollbar{
-    display: none;
-}
+
