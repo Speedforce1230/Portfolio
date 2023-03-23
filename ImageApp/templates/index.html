@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'GameTimeSite/CSS/styles.css' %}">
+</head>
+<body>
+<!--Simple styling text for cards-->
+<div class="container-fluid" id="image-container"> 
+    <div class="row">
+        <!--games is a variable from views.py used to retrieve all relevant information-->
+        <!--for loop is used to repeatedly create cards for each object defined separately-->
+        <!--{} used to write python code into html-->
+        {% for image in images %}
+        <div class="col" id="card-columns">
+            <div id="cards" class="card">
+                <img src="{{ image.image_url }}" class="card-img-top" alt="game image" >
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+{% endblock %}
+<html>
+</html>
