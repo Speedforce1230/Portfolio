@@ -16,11 +16,11 @@
 <div class="container-fluid" id="image-container"> 
     <div class="row" id="card-rows">
         {% for image in images %}
-        <div class="col" id="card-columns">
-            <div id="cards" class="card">
-                <img src="{{ image.image_url }}">
+            <div class="col" id="card-columns">
+                <div id="cards" class="card">
+                    <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}" alt="Photo">
+                </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </div>
