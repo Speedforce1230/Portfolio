@@ -1,10 +1,10 @@
 from django.db import models
 
 
-class Images(models.Model):
+class HomeImage(models.Model):
     name = models.CharField(max_length=60)
-    file_extension = models.CharField(max_length=3)
-class Fashion(models.Model):
+    file_extension = models.CharField(max_length=4)
+class FashionImage(models.Model):
     name = models.CharField(max_length=60)
-    file_extension = models.CharField(max_length=3)
+    file_extension = models.CharField(max_length=4)
     

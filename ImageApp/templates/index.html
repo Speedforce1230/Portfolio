@@ -3,22 +3,23 @@
 
 
 {% block content %}
-
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'ImageApp/css/styles.css' %}">
+    <script>
+        var href = "{% static '/ImageApp/css/styles.css' %}"
+    </script>
+    <script src="{% static '/ImageApp/js/display_img.js' %}"></script>
 </head>
 <body>
 <!--Simple styling text for cards-->
 <div class="container-fluid" id="image-container"> 
     <div class="row" id="card-rows">
-        {% for image in images %}
+        {% for image in home_images %}
             <div class="col" id="card-columns">
                 <div id="cards" class="card">
-                    <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}" alt="Photo">
+                    <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}">
                 </div>
             </div>
         {% endfor %}

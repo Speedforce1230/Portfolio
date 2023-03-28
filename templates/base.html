@@ -27,10 +27,10 @@
                             Category    
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                            <a class="dropdown-item" href="#">Fashion</a>
-                            <a class="dropdown-item" href="#">Street</a>
+                            <a id="fashion-anchor"class="dropdown-item" href="#">Fashion</a>
+                            <a id="street-anchor" class="dropdown-item" href="#">Street</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Wedding</a>
+                            <a id="wedding-anchor" class="dropdown-item" href="#">Wedding</a>
                         </div>
                     </li>
                 </ul>
@@ -38,6 +38,8 @@
         </div>
     </nav>
 {% block content %}
+{% endblock %}
+{% block content2 %}
 {% endblock %}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>

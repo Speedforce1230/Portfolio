@@ -1,16 +1,16 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-from . models import Images
-# GameTime.objects.all() is used to retrieve all objects created by the admin page on the website
-# It contains all the important fields like name, time played etc.
-homepage_images = Images.objects.all()
-# Index functions are used to render .html files and also images
-
-
+from . models import HomeImage, FashionImage
+from django.http import JsonResponse
+from django.conf import settings
+homepage_images = HomeImage.objects.all()
 def index(request):
     return render(request, 'index.html',
-                  {'images': homepage_images,})
+                  {'home_images': homepage_images,})
 
 def index2(request):
     return render(request, 'about.html')
-
+def send_fashion_img(request):
+    images = FashionImage.objects.all()
+    data = {"images": [{"name": image.name, "file_extension": image.file_extension} for image in images],
+            "MEDIA_URL": settings.MEDIA_URL_2}
+    return JsonResponse(data)
