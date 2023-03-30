@@ -7,8 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', index),
     path('about/', index2),
-    path('send_fashion_img/', send_fashion_img, name="send_fashion_img")
+    path('fashion_img/', send_fashion_img)
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.MEDIA_URL_2, document_root=settings.MEDIA_ROOT_2)
-

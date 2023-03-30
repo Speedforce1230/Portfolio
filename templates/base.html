@@ -27,10 +27,10 @@
                             Category    
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                            <a id="fashion-anchor"class="dropdown-item" href="#">Fashion</a>
-                            <a id="street-anchor" class="dropdown-item" href="#">Street</a>
+                            <a id="fashion-button"class="dropdown-item" href="#">Fashion</a>
+                            <a id="street-button" class="dropdown-item" href="#">Street</a>
                             <div class="dropdown-divider"></div>
-                            <a id="wedding-anchor" class="dropdown-item" href="#">Wedding</a>
+                            <a id="wedding-button" class="dropdown-item" href="#">Wedding</a>
                         </div>
                     </li>
                 </ul>
@@ -45,5 +45,9 @@
         integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script>
+    var href = "{% static '/ImageApp/css/styles.css' %}"
+</script>
+<script type="module" src="{% static '/ImageApp/js/display_img.js' %}"></script>
 </body>
 </html>
