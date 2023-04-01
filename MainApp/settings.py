@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ImageApp.apps.ImageAppConfig'
+    'ImageApp.apps.ImageAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -128,5 +128,8 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_ROOT = os.path.join(BASE_DIR, "static/ImageApp/images/home")
 MEDIA_ROOT_2 = os.path.join(BASE_DIR, "static/ImageApp/images/fashion")
+MEDIA_ROOT_3 = os.path.join(BASE_DIR, "static/ImageApp/images/product")
+
 MEDIA_URL = '/media/'
 MEDIA_URL_2 = '/media-2/'
+MEDIA_URL_3 = '/media-3/'

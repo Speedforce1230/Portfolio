@@ -7,7 +7,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', index),
     path('about/', index2),
-    path('fashion_img/', send_fashion_img)
+    path('fashion_img/', send_fashion_img),
+    path('product_img/', send_product_img),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.MEDIA_URL_2, document_root=settings.MEDIA_ROOT_2)
+urlpatterns += static(settings.MEDIA_URL_3, document_root=settings.MEDIA_ROOT_3)
+

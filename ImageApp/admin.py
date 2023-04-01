@@ -8,3 +8,4 @@ class AdminDisplay(admin.ModelAdmin):
 
 admin.site.register(models.HomeImage, AdminDisplay)
 admin.site.register(models.FashionImage, AdminDisplay)
+admin.site.register(models.ProductImage, AdminDisplay)

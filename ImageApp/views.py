@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import HomeImage, FashionImage
+from . models import HomeImage, FashionImage, ProductImage
 from django.http import JsonResponse
 from django.conf import settings
 homepage_images = HomeImage.objects.all()
@@ -13,4 +13,9 @@ def send_fashion_img(request):
     images = FashionImage.objects.all()
     data = {"images": [{"name": image.name, "file_extension": image.file_extension} for image in images],
             "MEDIA_URL": settings.MEDIA_URL_2}
+    return JsonResponse(data)
+def send_product_img(request):
+    images = ProductImage.objects.all()
+    data = {"images": [{"name": image.name, "file_extension": image.file_extension} for image in images],
+            "MEDIA_URL": settings.MEDIA_URL_3}
     return JsonResponse(data)

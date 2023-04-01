@@ -15,7 +15,9 @@
         {% for image in home_images %}
             <div class="col" id="card-columns">
                 <div id="cards" class="card">
-                    <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}">
+                    <a href="#" id="image-click">
+                       <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}">
+                    </a>
                 </div>
             </div>
         {% endfor %}
