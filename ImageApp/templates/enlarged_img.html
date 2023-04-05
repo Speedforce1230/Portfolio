@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+<p> WTF IS THIS????</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" id="card-columns">
+            <div id="cards" class="card">
+                <img src="{{ MEDIA_URL }}{{ img_name }}.{{ file_extension }}" id="{{ image.name }}">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

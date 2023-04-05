@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'ImageApp/css/styles.css' %}">
+    <script type="module" src="{% static 'ImageApp/js/enlarge_image.js' %}"></script>
 </head>
 <body>
 <!--Simple styling text for cards-->
@@ -15,9 +16,7 @@
         {% for image in home_images %}
             <div class="col" id="card-columns">
                 <div id="cards" class="card">
-                    <a href="#" id="image-click">
-                       <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}">
-                    </a>
+                    <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}" id="{{ image.name }}">
                 </div>
             </div>
         {% endfor %}

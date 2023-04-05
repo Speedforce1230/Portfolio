@@ -1,14 +1,16 @@
 from django.urls import path
-from . views import *
+from . views import DisplayHTML, SendImagesToJS
 from django.conf import settings
 from django.conf.urls.static import static
-# All Index Functions are from views.py and are used to render the web pages
-# path function is used to define a path for the urls of web pages
+
+display = DisplayHTML()
+send_data = SendImagesToJS()
 urlpatterns = [
-    path('', index),
-    path('about/', index2),
-    path('fashion_img/', send_fashion_img),
-    path('product_img/', send_product_img),
+    path('', display.index),
+    path('about/', display.index2),
+    path('fashion_img/', send_data.send_fashion_img),
+    path('product_img/', send_data.send_product_img),
+    path('home_img/', send_data.send_home_img),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.MEDIA_URL_2, document_root=settings.MEDIA_ROOT_2)

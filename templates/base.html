@@ -28,10 +28,10 @@
                             Category    
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                            <a id="fashion-button"class="dropdown-item" href="#">Fashion</a>
-                            <a id="product-button" class="dropdown-item" href="#">Product</a>
+                            <a id="fashion-button" class="dropdown-item" >Fashion</a>
+                            <a id="product-button" class="dropdown-item" >Product</a>
                             <div class="dropdown-divider"></div>
-                            <a id="wedding-button" class="dropdown-item" href="#">Wedding</a>
+                            <a id="wedding-button" class="dropdown-item" >Wedding</a>
                         </div>
                     </li>
                 </ul>
@@ -39,8 +39,6 @@
         </div>
     </nav>
 {% block content %}
-{% endblock %}
-{% block content2 %}
 {% endblock %}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
@@ -50,5 +48,9 @@
     var href = "{% static '/ImageApp/css/styles.css' %}"
 </script>
 <script type="module" src="{% static '/ImageApp/js/display_img.js' %}"></script>
+<script>
+    var path = "{% static '/ImageApp/css/enlarged_img.css' %}"
+</script>
+<script type="module" src="{% static '/ImageApp/js/enlarge_image.js' %}"></script>
 </body>
 </html>
