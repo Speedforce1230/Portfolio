@@ -31,7 +31,8 @@ class SendImagesToJS(View):
         return JsonResponse(data)
     
     def send_home_img(self, request):
-        data = {"images": [{"name": home_img.name, "file_extension": home_img.file_extension} for home_img in homepage_images]}
+        data = {"images": [{"name": home_img.name, "file_extension": home_img.file_extension} for home_img in homepage_images],
+                "MEDIA_URL": settings.MEDIA_URL}
         return JsonResponse(data)
 
 

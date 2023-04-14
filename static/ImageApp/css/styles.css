@@ -9,8 +9,6 @@
     padding-right: 5px;
 }
 #card-rows, #dynamic-card-row{
-    display: flex;
-    flex-wrap: wrap;
     margin: -5px;
 }
 #cards, #dynamic-cards{ 
@@ -18,9 +16,9 @@
     margin: 5px;
     background-color: black;
 }
-#cards img, #dynamic-cards img, #card-img{
+#cards img, #dynamic-cards img, #card-img, .col img{
     width: 850px;
-    height: 100%;
+    height: auto;
     margin: 10px;
     object-fit: cover;
     background-color: black;
@@ -33,13 +31,25 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
+    z-index: 1;
+    animation-name: enlargening;
+    animation-duration: 10s;
     padding: 20px;
 }
 #enlarged-image-container img{
-    max-width: 100%;
-    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+#home-button, .dropdown-menu a{
+    cursor: pointer;
+}
+.navbar-brand{
+    cursor: default;
 }
 .blur {
     filter: blur(8px);
+}
+@keyframes enlargening{
+    
 }

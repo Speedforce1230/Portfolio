@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ImageApp.apps.ImageAppConfig',
+    'mathfilters',
 ]
 
 MIDDLEWARE = [
@@ -131,7 +132,7 @@ MEDIA_ROOT_2 = os.path.join(BASE_DIR, "static/ImageApp/images/fashion")
 MEDIA_ROOT_3 = os.path.join(BASE_DIR, "static/ImageApp/images/product")
 
 MEDIA_URL = '/media/'
-MEDIA_URL_2 = '/media-2/'
-MEDIA_URL_3 = '/media-3/'
+MEDIA_URL_2 = '/media-fashion/'
+MEDIA_URL_3 = '/media-product/'
 
 

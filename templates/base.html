@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
+                        <a class="nav-link active" aria-current="page" id="home-button">Home</a>
                     </li>
                     <li class="nav-item dropdown" id="dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" 
@@ -47,10 +47,6 @@
 <script>
     var href = "{% static '/ImageApp/css/styles.css' %}"
 </script>
-<script type="module" src="{% static '/ImageApp/js/display_img.js' %}"></script>
-<script>
-    var path = "{% static '/ImageApp/css/enlarged_img.css' %}"
-</script>
-<script type="module" src="{% static '/ImageApp/js/enlarge_image.js' %}"></script>
+<script type="module" src="{% static '/ImageApp/js/attachImageToButton.js' %}"></script>
 </body>
 </html>
