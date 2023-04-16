@@ -32,6 +32,7 @@ export function send_image_to_webpage(url){
             })
         });
         imageContainer.appendChild(rowElement);
+        
     })
     .catch(error => console.error(error))
 }

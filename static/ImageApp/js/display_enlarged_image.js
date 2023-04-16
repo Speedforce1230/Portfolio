@@ -1,16 +1,17 @@
 let isImageDisplayed = false;
 
-export function onImageClick(name, extension, url){
+export function onImageClick(name, extension, mediaURL){
     if (!isImageDisplayed) {
-        display_enlarged_image(name, extension, url);
+        display_enlarged_image(name, extension, mediaURL);
         isImageDisplayed = true;
     }
 }
 
-function display_enlarged_image(name, extension, url){
+function display_enlarged_image(name, extension, mediaURL){
     const clickedImageName = name;
-    const image_extension = extension;
-    const mediaURL = url;
+    const clickedImageExtension = extension;
+    const clickedImageMediaURL = mediaURL;
+
     const linkElement = document.createElement("link");
     linkElement.href = href;
     linkElement.rel = "stylesheet";
@@ -21,18 +22,19 @@ function display_enlarged_image(name, extension, url){
     imageContainer.classList.add("container");
     imageContainer.id = "enlarged-image-container";
 
+
     const mainContainer = document.getElementById("image-container");
     const navContainer = document.getElementById("navbar");
     
     const imageElement = document.createElement("img");
-    imageElement.src = mediaURL + clickedImageName + "." + image_extension;
+    imageElement.src = clickedImageMediaURL + clickedImageName + "." + clickedImageExtension;
     imageElement.id = "enlarged-img";
     
     imageContainer.appendChild(imageElement);
     document.body.appendChild(imageContainer);
     mainContainer.classList.add("blur");
     navContainer.classList.add("blur");
-
+    
 
     imageContainer.addEventListener("click", function(){
         if (imageContainer){
