@@ -10,14 +10,20 @@
 </head>
 <body>
 <!--Simple styling text for cards-->
-<div class="container-fluid" id="image-container"> 
-    <div class="row" id="card-rows">
-        {% for image in home_images %}
+<div class="container-fluid" id="image-container">
+    {% for imgTuple in home_images %}
+        {% for image in imgTuple %}
+            {% if forloop.first %}
+                <div class="row" id="card-rows">
+            {% endif %}
             <div class="col" id="card-columns">
-              <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}" id="{{ image.name }}">
+                <img src="{{ MEDIA_URL }}{{ image.name }}.{{ image.file_extension }}" id="{{ image.name }}">
             </div>
+            {% if forloop.counter|divisibleby:2 or forloop.last %}
+                </div>
+            {% endif %}
         {% endfor %}
-    </div>
+    {% endfor %}
 </div>
 </body>
 {% endblock %}
