@@ -10,12 +10,14 @@ export function send_image_to_webpage(url){
         imageContainer.innerHTML = "";
         let rowElement = "";
         for (var i = 0; i < data.length; i++){
+            // To display only two images in one row.
             if (i % 2 == 0){
                 rowElement = document.createElement("div");
                 rowElement.classList.add("row");
                 rowElement.id = "dynamic-card-row";
                 imageContainer.appendChild(rowElement);
             }
+            
             let image = data.images[i];
             const imgElement = document.createElement("img");
             imgElement.src = data.MEDIA_URL + image.name + "." + image.file_extension;
