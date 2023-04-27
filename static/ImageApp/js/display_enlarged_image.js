@@ -1,7 +1,13 @@
 let isImageDisplayed = false;
 
-export function onImageClick(name, extension, mediaURL){
+export function onImageClick(name, extension, mediaURL, element){
     if (!isImageDisplayed) {
+        // const sent_img = document.getElementById(name);
+        // const posi = sent_img.getBoundingClientRect();
+        // console.log(posi.left);
+        // console.log(posi.right);
+        // console.log(posi.top);
+        // console.log(posi.bottom);
         display_enlarged_image(name, extension, mediaURL);
         isImageDisplayed = true;
     }
@@ -35,7 +41,7 @@ function display_enlarged_image(name, extension, mediaURL){
     mainContainer.classList.add("blur");
     navContainer.classList.add("blur");
     
-
+    
     imageContainer.addEventListener("click", function(){
         if (imageContainer){
             imageContainer.remove();
