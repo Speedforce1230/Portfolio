@@ -1,19 +1,15 @@
-#image-container{
+#main-container{
     position: relative;
     padding: 5px;
 }
-#card-columns, #dynamic-card-columns{
+.card-columns{
     padding-right: 5px;
 }
-#card-rows, #dynamic-card-row{
+.card-rows{
     margin: -5px;
 }
-#cards, #dynamic-cards{ 
-    padding-bottom: 5px;
-    margin: 5px;
-    background-color: black;
-}
-#cards img, #dynamic-cards img, #card-img, .col img{
+
+.card-columns img{
     width: 98%;
     height: auto;
     margin: 10px;
@@ -21,34 +17,37 @@
     object-fit: cover;
     background-color: black;
 }
-#main-page{
+.main-page{
     background-color: black;
 }
-#enlarged-image-container{
+#enlarged-img-container{
     top: var(--start-top);
     left: var(--start-left);
     width: 100%;
     height: auto;
     position: fixed;
     z-index: 10;
-    animation: positionContainer 0.5s ease-out forwards;
+    animation: centerContainer 0.15s ease-out forwards;
     padding: 20px;
+    border-radius: 3px;
 }
-#enlarged-image-container img{
+#enlarged-img-container img{
+    
     width: var(--img-width);
     height: auto;
     border-radius: 20px;
     object-fit: cover;
-    animation: enlargenImg 0.5s ease-out forwards;
+    animation: enlargenImg 0.15s ease-out forwards;
 }
-#home-button, .dropdown-menu a{
+.button-custom{
     cursor: pointer;
+    
 }
 .navbar-brand{
     cursor: default;
 }
 .blur {
-    animation: blurring 1s ease-out forwards;
+    animation: blurring 0.15s ease-out forwards;
 }
 .navbar{
     background-color: grey;
@@ -61,7 +60,7 @@
         filter: blur(8px);
     }
 }
-@keyframes positionContainer{
+@keyframes centerContainer{
     from {
         top: var(--start-top);
         left: var(--start-left);
