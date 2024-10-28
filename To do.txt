@@ -1,0 +1,3 @@
+1. Optimize
+2. Home page can't handle if there are less than 2 images in one row. Fix it.
+3. JS code makes images too big, fix that too.

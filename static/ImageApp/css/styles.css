@@ -14,9 +14,10 @@
     background-color: black;
 }
 #cards img, #dynamic-cards img, #card-img, .col img{
-    width: 850px;
+    width: 98%;
     height: auto;
     margin: 10px;
+    border-radius: 20px;
     object-fit: cover;
     background-color: black;
 }
@@ -24,18 +25,21 @@
     background-color: black;
 }
 #enlarged-image-container{
+    top: var(--start-top);
+    left: var(--start-left);
+    width: 100%;
+    height: auto;
     position: fixed;
     z-index: 10;
-    animation-name: enlargeningContainer;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    animation: positionContainer 0.5s ease-out forwards;
     padding: 20px;
 }
 #enlarged-image-container img{
-    width: 100%;
+    width: var(--img-width);
     height: auto;
     border-radius: 20px;
     object-fit: cover;
+    animation: enlargenImg 0.5s ease-out forwards;
 }
 #home-button, .dropdown-menu a{
     cursor: pointer;
@@ -44,19 +48,36 @@
     cursor: default;
 }
 .blur {
-    filter: blur(8px);
+    animation: blurring 1s ease-out forwards;
 }
 .navbar{
     background-color: grey;
 }
-@keyframes enlargeningContainer{
+@keyframes blurring{
+    from{
+        filter:blur(1px);
+    }
+    to{
+        filter: blur(8px);
+    }
+}
+@keyframes positionContainer{
     from {
+        top: var(--start-top);
+        left: var(--start-left);
         
     }
     to {
-        position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+@keyframes enlargenImg{
+    from {
+        width: var(--img-width);
+    }
+    to{
+        width: 100%;
     }
 }
