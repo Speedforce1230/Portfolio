@@ -6,7 +6,7 @@ export function send_image_to_webpage(url){
     fetch(url)
     .then(Response => Response.json())
     .then(data => {
-        const imageContainer = document.getElementById("image-container");
+        const imageContainer = document.getElementById("main-container");
         imageContainer.innerHTML = "";
         let rowElement = "";
         for (var i = 0; i < data.length; i++){
@@ -14,7 +14,7 @@ export function send_image_to_webpage(url){
             if (i % 2 == 0){
                 rowElement = document.createElement("div");
                 rowElement.classList.add("row");
-                rowElement.id = "dynamic-card-row";
+                rowElement.classList.add("card-rows");
                 imageContainer.appendChild(rowElement);
             }
             
@@ -26,7 +26,7 @@ export function send_image_to_webpage(url){
 
             const columnElement = document.createElement("div");
             columnElement.classList.add("col");
-            columnElement.id = "dynamic-card-columns";
+            columnElement.classList.add("card-columns");
             columnElement.appendChild(imgElement);
             rowElement.appendChild(columnElement);
             imgElement.addEventListener("click", function(){
